@@ -22,17 +22,60 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Add this line to your application.js file
+```js
+//= moment
+//= rome
+//= material-datetime-picker
+````
 
-## Development
+Add following to your application.scss file
+```scss
+@import "material-datetime-picker";
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+**If you are using gem with Materializecss, you should to add this custom SCSS classes cause JS lib hasn't support Materializecss yet.**
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```scss
+.c-datepicker {
+  box-sizing: content-box !important;
+  button {
+    background-color: #fff !important;
+  }
+}
 
+.c-datepicker__calendar {
+  box-sizing: border-box;
+}
+
+.c-datepicker__days {
+  box-sizing: border-box;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: grey;
+  width: 0;
+  td, th {
+    padding: 0;
+    margin-bottom: 2px;
+    text-align: center;
+  }
+}
+
+.c-datepicker__days-head {
+  border: none !important;
+}
+
+.c-btn {
+  @extend .btn
+}
+
+.c-btn--flat {
+  @extend .btn-flat
+}
+```
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/material-datetimepicker-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/hetsketch/material-datetimepicker-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
